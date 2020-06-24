@@ -1,0 +1,148 @@
+{
+  "topSystem": {
+    "attributes": {
+      "dn": "sys",
+      "rn": "sys"
+    },
+    "children": [
+      {
+        "ipv4Entity": {
+          "attributes": {
+            "dn": "sys/ipv4",
+            "rn": "ipv4"
+          },
+          "children": [
+            {
+              "ipv4Inst": {
+                "attributes": {
+                  "dn": "sys/ipv4/inst",
+                  "rn": "inst"
+                },
+                "children": [
+                  {
+                    "ipv4Dom": {
+                      "attributes": {
+                        "dn": "sys/ipv4/inst/dom-default",
+                        "name": "default",
+                        "rn": "dom-default"
+                      },
+                      "children": [
+                        {
+                          "ipv4If": {
+                            "attributes": {
+                              "dn": "sys/ipv4/inst/dom-default/if-[eth1/1]",
+                              "id": "eth1/1",
+                              "rn": "if-[eth1/1]"
+                            },
+                            "children": [
+                              {
+                                "ipv4Addr": {
+                                  "attributes": {
+                                    "addr": "1.1.1.1/30",
+                                    "dn": "sys/ipv4/inst/dom-default/if-[eth1/1]/addr-[1.1.1.1/30]",
+                                    "pref": "0",
+                                    "rn": "addr-[1.1.1.1/30]",
+                                    "tag": "0"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "interfaceEntity": {
+          "attributes": {
+            "dn": "sys/intf",
+            "rn": "intf"
+          },
+          "children": [
+            {
+              "l1PhysIf": {
+                "attributes": {
+                  "adminSt": "up",
+                  "dn": "sys/intf/phys-[eth1/1]",
+                  "id": "eth1/1",
+                  "layer": "Layer3",
+                  "rn": "phys-[eth1/1]",
+                  "userCfgdFlags": "admin_layer,admin_state"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ospfEntity": {
+          "attributes": {
+            "dn": "sys/ospf",
+            "rn": "ospf"
+          },
+          "children": [
+            {
+              "ospfInst": {
+                "attributes": {
+                  "dn": "sys/ospf/inst-API-MADE",
+                  "name": "API-MADE",
+                  "rn": "inst-API-MADE"
+                },
+                "children": [
+                  {
+                    "ospfDom": {
+                      "attributes": {
+                        "dn": "sys/ospf/inst-API-MADE/dom-default",
+                        "name": "default",
+                        "rn": "dom-default",
+                        "rtrId": "1.1.1.1"
+                      },
+                      "children": [
+                        {
+                          "ospfIf": {
+                            "attributes": {
+                              "advertiseSecondaries": "yes",
+                              "area": "0.0.0.0",
+                              "dn": "sys/ospf/inst-API-MADE/dom-default/if-[eth1/1]",
+                              "id": "eth1/1",
+                              "rn": "if-[eth1/1]"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "fmEntity": {
+          "attributes": {
+            "dn": "sys/fm",
+            "rn": "fm"
+          },
+          "children": [
+            {
+              "fmOspf": {
+                "attributes": {
+                  "adminSt": "enabled",
+                  "dn": "sys/fm/ospf",
+                  "rn": "ospf"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
