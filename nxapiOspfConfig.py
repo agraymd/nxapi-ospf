@@ -40,7 +40,7 @@ token = response.cookies['APIC-cookie']
 
   NOTE: Items that need your input are designated with !!! CHANGE ME !!! placeholders. 
   
-  You need to replace the IP address / URL of your box, and the username and password portions of the authenticate_payload
+  You need to replace the IP address / URL of your box.
   
   Also note that you may want to change the payload. This is set to run the following commands: 
   
