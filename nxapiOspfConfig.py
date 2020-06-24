@@ -65,7 +65,7 @@ ospf_payload = "{\r\n  \"topSystem\": {\r\n    \"attributes\": {\r\n      \"dn\"
 ospf_headers = {
   'Content-Type': 'application/json',
   'Cookie': ''
-}
+  }
 
 # Set value of Cookie key in ospf_headers to token
 ospf_headers['Cookie'] = "APIC-cookie=" + token
